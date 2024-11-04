@@ -109,6 +109,108 @@ Thank you for your interest in contributing to *SovereignQuest*! We welcome all 
 
 ---
 
+### **Working on an Issue**
+
+Once you have been assigned an issue, follow these steps to complete it efficiently:
+
+1. **Navigate to the GitHub Repository**:
+   - Start by accessing the **SovereignQuest** repository on GitHub. Ensure that you're logged into your GitHub account.
+
+2. **Clone the Repository**:
+   - Clone the repository to your local machine if you haven’t already:
+     ```bash
+     git clone https://github.com/your-username/SovereignQuest.git
+     ```
+   - Navigate into the project directory:
+     ```bash
+     cd SovereignQuest
+     ```
+
+3. **Update Your Local Branch**:
+   - Always begin by updating your local copy to include the latest changes from the `develop` branch:
+     ```bash
+     git checkout develop
+     git pull origin develop
+     ```
+
+4. **Create a New Branch for the Issue**:
+   - Create a new branch for your work. This helps isolate your changes until they are ready to be reviewed and merged. Use a descriptive name that corresponds to the issue:
+     ```bash
+     git checkout -b feature/issue-<issue-number>-<short-description>
+     ```
+     - For example: `feature/issue-101-add-user-auth`
+
+5. **Work on the Issue**:
+   - Open your code editor (e.g., **VS Code**), and start working on the assigned task.
+   - Follow the **Development Guidelines** to ensure you adhere to the coding standards and best practices.
+   - Regularly save your work, and frequently test small changes to verify functionality.
+   - Use **ESLint** and **Prettier** to check for code style issues:
+     ```bash
+     npm run lint
+     npm run format
+     ```
+
+6. **Commit Changes**:
+   - Once you’ve made significant progress or completed the issue, **commit** your changes.
+   - Write descriptive commit messages following best practices:
+     ```bash
+     git add .
+     git commit -m "Implemented user registration flow (#<issue-number>)"
+     ```
+   - Make **small, frequent commits** rather than one large commit. This helps reviewers understand each change more easily.
+
+7. **Push Your Branch to GitHub**:
+   - Push your branch to GitHub to back up your work and prepare for a pull request:
+     ```bash
+     git push origin feature/issue-<issue-number>-<short-description>
+     ```
+
+8. **Create a Pull Request (PR)**:
+   - Navigate to the repository page on GitHub.
+   - Click **Compare & Pull Request**.
+   - Select the `develop` branch as the base, and your feature branch as the compare branch.
+   - Fill in the [PULL_REQUEST_TEMPLATE](//.github/PULL_REQUEST_TEMPLATE.md) that was set up for the repository:
+     - **Title**: Provide a meaningful title related to the issue.
+     - **Description**: Include details about what was done, reference the issue number (e.g., `Resolves #101`), and provide context if needed.
+   - Ensure that all items in the PR checklist are checked:
+     - [ ] **Code passes all tests.**
+     - [ ] **Code adheres to style requirements.**
+     - [ ] **New functionality is documented in `README.md` if necessary.**
+
+9. **Request a Review**:
+   - Tag at least one reviewer, usually a senior team member or a lead, for feedback.
+   - You can also @mention any team lead if further discussion is needed on the pull request.
+
+10. **Address Feedback**:
+    - Be ready to address any review comments. You may need to make additional commits to your branch based on feedback.
+    - Once changes are made, **push** them to your branch:
+      ```bash
+      git add .
+      git commit -m "Addressed review comments on registration flow"
+      git push origin feature/issue-<issue-number>-<short-description>
+      ```
+
+11. **Merge the Pull Request**:
+    - Once your PR is approved, a team lead or reviewer will merge it into the `develop` branch.
+    - If you have permissions, **do not** merge your PR until you have received approval.
+
+12. **Delete Your Branch**:
+    - After your PR has been merged, delete your local and remote branches to keep things tidy:
+      ```bash
+      git branch -d feature/issue-<issue-number>-<short-description>
+      git push origin --delete feature/issue-<issue-number>-<short-description>
+      ```
+
+### **Summary of Workflow**
+- Clone or pull the latest changes.
+- Create a branch named after the issue.
+- Make and test changes locally.
+- Push the branch and create a pull request.
+- Tag a reviewer and address feedback.
+- Delete your feature branch after merging.
+
+---
+
 ### Contact
 
 If you have questions or need guidance, feel free to reach out to a team lead. We’re here to help make your contribution experience as smooth as possible!
