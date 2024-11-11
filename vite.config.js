@@ -10,11 +10,11 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'src/main.js'),
         index: path.resolve(__dirname, 'src/pages/index/index.js'),
-        login: path.resolve(__dirname, 'src/pages/login/login.js'),
+        /* login: path.resolve(__dirname, 'src/pages/login/login.js'),
         registration: path.resolve(__dirname, 'src/pages/registration/registration.js'),
         forgotUsername: path.resolve(__dirname, 'src/pages/forgotUsername/forgotUsername.js'),
         forgotPassword: path.resolve(__dirname, 'src/pages/forgotPassword/forgotPassword.js'),
-        resetPassword: path.resolve(__dirname, 'src/pages/resetPassword/resetPassword.js'),
+        resetPassword: path.resolve(__dirname, 'src/pages/resetPassword/resetPassword.js'), */
       },
     },
   },
@@ -27,11 +27,11 @@ export default defineConfig({
           template: './src/pages/index/index.html',
           injectOptions: {
             data: {
-              title: 'Index Page - SovereignQuest',
+              title: 'Landing Page - SovereignQuest',
             },
           },
         },
-        login: {
+/*        login: {
           entry: './src/pages/login/login.js',
           template: './src/pages/login/login.html',
           injectOptions: {
@@ -41,41 +41,41 @@ export default defineConfig({
           },
         },
         registration: {
-            entry: './src/pages/registration/registration.js',
-            template: './src/pages/registration/registration.html',
-            injectOptions: {
-              data: {
-                title: 'Registration Page - SovereignQuest',
+          entry: './src/pages/registration/registration.js',
+          template: './src/pages/registration/registration.html',
+          injectOptions: {
+            data: {
+              title: 'Registration Page - SovereignQuest',
             },
           },
         },
         forgotUsername: {
-            entry: './src/pages/forgotUsername/forgotUsername.js',
-            template: './src/pages/forgotUsername/forgotUsername.html',
-            injectOptions: {
-              data: {
-                title: 'Username Recovery - SovereignQuest',
+          entry: './src/pages/forgotUsername/forgotUsername.js',
+          template: './src/pages/forgotUsername/forgotUsername.html',
+          injectOptions: {
+            data: {
+              title: 'Username Recovery - SovereignQuest',
             },
           },
         },
         forgotPassword: {
-            entry: './src/pages/forgotPassword/forgotPassword.js',
-            template: './src/pages/forgotPassword/forgotPassword.html',
-            injectOptions: {
-              data: {
-                title: 'Password Recovery - SovereignQuest',
+          entry: './src/pages/forgotPassword/forgotPassword.js',
+          template: './src/pages/forgotPassword/forgotPassword.html',
+          injectOptions: {
+            data: {
+              title: 'Password Recovery - SovereignQuest',
             },
           },
         },
         resetPassword: {
-            entry: './src/pages/resetPassword/resetPassword.js',
-            template: './src/pages/resetPassword/resetPassword.html',
-            injectOptions: {
-              data: {
-                title: 'Password Reset - SovereignQuest',
+          entry: './src/pages/resetPassword/resetPassword.js',
+          template: './src/pages/resetPassword/resetPassword.html',
+          injectOptions: {
+            data: {
+              title: 'Password Reset - SovereignQuest',
             },
           },
-        },
+        }, */
       },
     }),
   ],
