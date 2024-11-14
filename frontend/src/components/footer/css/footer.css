@@ -1,25 +1,25 @@
 /* Footer styles */
 .site-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
 }
 
 .social-icons {
-    margin-bottom: 1rem; /* Adds space below the icon links */
+  margin-bottom: 1rem; /* Adds space below the icon links */
 }
 
 .social-icons a {
-    color: white; /* Sets the icon color */
-    margin: 0 10px; /* Adds space between icon links */
-    font-size: 1.5rem; /* Sets the size of the icons */
-    display: inline-block; /* Aligns icons in line */
+  color: white; /* Sets the icon color */
+  margin: 0 10px; /* Adds space between icon links */
+  font-size: 1.5rem; /* Sets the size of the icons */
+  display: inline-block; /* Aligns icons in line */
 }
 
 .social-icons a:hover,
 .social-icons a:focus {
-    color: #5b92e5; /* Change color on hover/focus for visual feedback */
-    text-decoration: none; /* Removes underline from links */
+  color: #5b92e5; /* Change color on hover/focus for visual feedback */
+  text-decoration: none; /* Removes underline from links */
 }

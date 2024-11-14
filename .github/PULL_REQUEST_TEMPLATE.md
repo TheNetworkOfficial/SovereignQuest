@@ -1,19 +1,23 @@
 ## Pull Request Title: [Type] Short Description of Changes
 
 ### Description
+
 - **What’s been added or fixed?** Provide a brief summary of changes and why they were made.
-  
+
 ### Related Issues
+
 - Closes #[issue_number] (e.g., `Closes #42` for a related issue)
 - Link other relevant issues or PRs, if applicable.
 
 ### Type of Change
+
 - [ ] Bug fix 🐛
 - [ ] New feature 🚀
 - [ ] Documentation update 📚
 - [ ] Code refactor ✨
 
 ### Checklist
+
 - [ ] Code follows the project’s style guidelines.
 - [ ] Self-review completed.
 - [ ] Tests have been added for new functionality or bug fixes.
@@ -21,9 +25,11 @@
 - [ ] Screenshots or videos (if applicable) have been added to demonstrate new functionality.
 
 ### Additional Notes
+
 Add any other context, testing notes, or details here.
 
 ### Example Pull Request:
+
 - Pull Request Title: [Feature] Add User Authentication
 
 - Description
