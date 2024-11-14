@@ -1,23 +1,23 @@
 // checkAuth.js
 
 // Check if user is logged in
-fetch('http://localhost:3000/api/profile', {
-    method: 'GET',
-    credentials: 'include'
+fetch("http://localhost:3000/api/profile", {
+  method: "GET",
+  credentials: "include",
 })
-.then(response => {
+  .then((response) => {
     if (response.status === 200) {
-        return response.json();
+      return response.json();
     } else {
-        // User is not logged in
-        window.location.href = 'login.html';
+      // User is not logged in
+      window.location.href = "login.html";
     }
-})
-.then(data => {
+  })
+  .then((data) => {
     // User is logged in
-    const welcomeMessage = document.getElementById('welcome-message');
+    const welcomeMessage = document.getElementById("welcome-message");
     if (welcomeMessage) {
-        welcomeMessage.innerText = `Welcome, ${data.username}!`;
+      welcomeMessage.innerText = `Welcome, ${data.username}!`;
     }
-})
-.catch(error => console.error('Error:', error));
+  })
+  .catch((error) => console.error("Error:", error));

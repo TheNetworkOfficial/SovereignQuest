@@ -2,123 +2,123 @@
 
 /* Base Popup Container */
 .popup-container {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9999; /* High z-index to overlay all other elements */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* High z-index to overlay all other elements */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 /* Base Popup Content */
 .popup-content {
-    background-color: #2b2b2b; /* Dark background */
-    padding: 17px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 1200px; /* Adjust as needed */
-    max-height: 95vh; /* Prevent overflow on smaller screens */
-    overflow-y: auto; /* Enable vertical scroll if content is too tall */
-    color: #e0e0e0; /* Light text for contrast */
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+  background-color: #2b2b2b; /* Dark background */
+  padding: 17px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px; /* Adjust as needed */
+  max-height: 95vh; /* Prevent overflow on smaller screens */
+  overflow-y: auto; /* Enable vertical scroll if content is too tall */
+  color: #e0e0e0; /* Light text for contrast */
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 /* Close Button */
 .popup-close-button {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #e0e0e0;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #e0e0e0;
 }
 
 .popup-close-button:hover,
 .popup-close-button:focus {
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* Main Content with Image and Form */
 .popup-main-content {
-    display: grid;
-    grid-template-columns: 200px 1fr; /* Fixed width for image, flexible for form */
-    grid-template-rows: auto auto; /* Two rows for form fields */
-    gap: 20px; /* Space between image and form */
-    align-items: start; /* Align items to the top */
-    margin-bottom: 20px; /* Space below the main content */
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Fixed width for image, flexible for form */
+  grid-template-rows: auto auto; /* Two rows for form fields */
+  gap: 20px; /* Space between image and form */
+  align-items: start; /* Align items to the top */
+  margin-bottom: 20px; /* Space below the main content */
 }
 
 /* Image Section */
 /* Ensure the image section is positioned relative for overlay */
 .popup-image-section {
-    position: relative; /* To position the overlay correctly */
-    cursor: pointer; /* Indicate that the area is clickable */
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
+  position: relative; /* To position the overlay correctly */
+  cursor: pointer; /* Indicate that the area is clickable */
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
 }
 
 /* Style the dropzone overlay */
 .dropzone-overlay p {
-    font-size: 0.9rem;
-    pointer-events: none; /* Allow clicks to pass through to the dropzone */
+  font-size: 0.9rem;
+  pointer-events: none; /* Allow clicks to pass through to the dropzone */
 }
 
 .popup-image-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
 /* Form Fields Container */
 .popup-form-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between form sections */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form sections */
 }
 
 /* New: Container for First and Second Form Rows Side by Side */
 .popup-top-form-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px; /* Space between the two form rows */
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Space between the two form rows */
 }
 
 /* Form Rows */
 .popup-form-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* Form Columns */
 .popup-form-column {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    flex: 1; /* Allow columns to grow equally */
-    min-width: 200px; /* Ensure columns don't get too narrow */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1; /* Allow columns to grow equally */
+  min-width: 200px; /* Ensure columns don't get too narrow */
 }
 
 /* Form Fields */
 .popup-form-field {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Ensure fields take full width of their container */
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure fields take full width of their container */
 }
 
 /* Labels */
 .popup-form-field label {
-    font-size: 0.8rem;
-    color: #e0e0e0;
+  font-size: 0.8rem;
+  color: #e0e0e0;
 }
 
 /* Inputs */
@@ -126,170 +126,170 @@
 .popup-form-field input[type="url"],
 .popup-form-field input[type="number"],
 .popup-form-field select {
-    padding: 2px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    background-color: #333;
-    color: #e0e0e0;
-    font-size: 0.9rem;
-    width: 100%; /* Ensure inputs take full width of their container */
-    box-sizing: border-box; /* Include padding and border in width */
+  padding: 2px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  width: 100%; /* Ensure inputs take full width of their container */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
 /* Headings within Popups */
 .popup-content h2,
 .popup-content h3 {
-    color: #e0e0e0;
-    margin-bottom: none;
+  color: #e0e0e0;
+  margin-bottom: none;
 }
 
 .popup-content h3 {
-    margin-top: 1px;
-    font-size: 0.9rem;
+  margin-top: 1px;
+  font-size: 0.9rem;
 }
 
 /* Tables within Popups */
 .popup-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
 }
 
 .popup-content table th,
 .popup-content table td {
-    border: 1px solid #555;
-    padding: 8px;
-    text-align: center;
+  border: 1px solid #555;
+  padding: 8px;
+  text-align: center;
 }
 
 .popup-content table th {
-    background-color: #444;
-    color: #fff;
+  background-color: #444;
+  color: #fff;
 }
 
 /* Add Row Button */
 #add-row-button {
-    padding: 8px 12px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    background-color: #28a745; /* Green color for add */
-    color: white;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745; /* Green color for add */
+  color: white;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
 }
 
 #add-row-button:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 /* Remove Row Button */
 .remove-row-button {
-    padding: 5px 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    background-color: #dc3545; /* Red color for remove */
-    color: white;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #dc3545; /* Red color for remove */
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .remove-row-button:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }
 
 /* Form Buttons */
 .popup-button-container,
 .form-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .popup-button-container button,
 .form-buttons button {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF; /* Blue color for primary actions */
-    color: white;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Blue color for primary actions */
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .popup-button-container button:hover,
 .form-buttons button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .form-buttons button[type="button"]:last-child,
 .popup-button-container button:last-child {
-    background-color: #6c757d; /* Grey color for cancel actions */
+  background-color: #6c757d; /* Grey color for cancel actions */
 }
 
 .form-buttons button[type="button"]:last-child:hover,
 .popup-button-container button:last-child:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
 
 /* Drag-and-Drop Overlay */
 .dropzone-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 5px;
-    text-align: center;
-    padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
 }
 
 .popup-image-section {
-    position: relative; /* To position the overlay correctly */
-    cursor: pointer; /* Indicate that the area is clickable */
+  position: relative; /* To position the overlay correctly */
+  cursor: pointer; /* Indicate that the area is clickable */
 }
 
 .popup-image-section:hover .dropzone-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Highlight the dropzone when a file is being dragged over */
 .popup-image-section.dragover .dropzone-overlay {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .popup-main-content {
-        grid-template-columns: 1fr; /* Stack image and form vertically on smaller screens */
-        grid-template-rows: auto auto;
-    }
+  .popup-main-content {
+    grid-template-columns: 1fr; /* Stack image and form vertically on smaller screens */
+    grid-template-rows: auto auto;
+  }
 
-    .popup-image-section {
-        grid-row: 1; /* Image on top */
-        grid-column: 1;
-        height: 150px; /* Adjust height for smaller screens */
-    }
+  .popup-image-section {
+    grid-row: 1; /* Image on top */
+    grid-column: 1;
+    height: 150px; /* Adjust height for smaller screens */
+  }
 
-    .popup-form-fields {
-        grid-row: 2;
-        grid-column: 1;
-    }
+  .popup-form-fields {
+    grid-row: 2;
+    grid-column: 1;
+  }
 
-    /* Adjust .popup-top-form-container for smaller screens */
-    .popup-top-form-container {
-        flex-direction: column; /* Stack form rows vertically on smaller screens */
-    }
+  /* Adjust .popup-top-form-container for smaller screens */
+  .popup-top-form-container {
+    flex-direction: column; /* Stack form rows vertically on smaller screens */
+  }
 }

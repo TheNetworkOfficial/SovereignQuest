@@ -9,10 +9,11 @@
   },
   "scripts": {
     "test": "echo \"No tests yet\"",
-    "prepare": "husky install",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "prepare": "[ $CI ] || husky install",
+    "start": "webpack serve --config webpack.config.js --mode development",
+    "build": "webpack --config webpack.config.js --mode production",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -20,16 +21,23 @@
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.11.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
+    "mini-css-extract-plugin": "^2.9.2",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
-    "vite": "^5.4.10",
-    "vite-plugin-html": "^3.2.2"
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   },
   "husky": {
     "hooks": {
