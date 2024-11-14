@@ -87,13 +87,13 @@ module.exports = {
       template: "./frontend/src/pages/index/index.html",
       filename: "index.html",
       chunks: ["main", "index"],
-      favicon: "./frontend/src/assets/images/icons/test.ico",
+      favicon: "./frontend/src/assets/images/icons/SovereignQuest.pngnQuest.png",
     }),
     new HtmlWebpackPlugin({
       template: "./frontend/src/pages/login/login.html",
       filename: "login.html",
       chunks: ["main", "login"],
-      favicon: "./frontend/src/assets/images/icons/test.ico",
+      favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
     }),
     // Additional pages...
   ],
@@ -155,7 +155,7 @@ new HtmlWebpackPlugin({
   template: './frontend/src/pages/about/index.html',
   filename: 'about.html',
   chunks: ['main', 'about'],
-  favicon: './frontend/src/assets/images/icons/test.ico'
+  favicon: './frontend/src/assets/images/icons/SovereignQuest.png'
 }),
 ```
 
