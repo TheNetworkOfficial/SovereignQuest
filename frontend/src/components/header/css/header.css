@@ -1,21 +1,15 @@
 /* Header styles */
+/* Navbar Styles */
 .site-header {
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: top 0.3s;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  padding-left: 150px;
-  background-color: #333;
-  color: white;
+  padding: 20px;
+  background-color: #1f1f1f;
 }
 
 .logo-wrapper {
+  margin-left: 4rem;
   display: flex;
   align-items: center;
   flex: 0 0 auto; /* Do not grow, do not shrink, and base size on the content */
@@ -36,123 +30,76 @@
 }
 
 .logo-title {
-  font-family: "Gideon Roman", serif;
   margin-left: 1rem;
-  font-size: 2.5rem;
-  color: #5b92e5; /* UN blue color */
+  font-size: 3rem;
   font-weight: bold;
   display: flex;
   align-items: center; /* Centers text vertically */
 }
 
-/* Navigation and Toolkit wrapper */
 .nav-and-toolkit {
-  display: flex; /* Aligns navigation and toolkit dropdown inline */
-  align-items: center; /* Centers items vertically */
-  justify-content: start; /* Align items to the start */
-  flex-wrap: wrap; /* Allow items to wrap if needed */
-}
-
-/* Navigation link styles */
-.site-header .navigation a,
-.toolkit-dropdown > a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem;
-  margin: 0 0.5rem;
-  font-weight: bold;
-}
-
-.site-header .navigation a:hover,
-.toolkit-dropdown > a:hover {
-  text-decoration: underline;
-}
-
-/* Toolkit Dropdown */
-.toolkit-dropdown {
-  position: relative;
-}
-
-/* Styles for the Enable Ethereum Button */
-.enableEthereumButton {
-  background-color: var(--button-background);
-  color: var(--text-color-main);
-  padding: var(--button-padding);
-  font-size: var(--button-font-size);
-  font-weight: bold;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: background-color 0.3s;
-  text-transform: uppercase;
-  display: inline-block;
-  margin: 0.5rem 0;
-  border: none;
-}
-
-.enableEthereumButton:hover {
-  background-color: var(--button-hover-background);
-}
-
-/* Styles for the Account Display */
-.showAccount {
-  background-color: var(--button-background);
-  color: var(--text-color-main);
-  padding: var(--button-padding);
-  font-size: var(--button-font-size);
-  font-weight: bold;
-  border-radius: var(--border-radius);
-  text-transform: uppercase;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  margin: 0.5rem 0;
-  border: none;
 }
 
-/* Additional style for account icon */
-.account-icon {
-  width: 20px; /* Adjust as needed */
-  height: 20px; /* Adjust as needed */
-  margin: 0 0.5rem;
+.navigation {
+  margin-right: 4rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-.account-display {
+.navigation li {
+  margin-left: 20px;
+  font-size: 1.25rem;
   position: relative;
-  display: inline-block;
 }
 
-/* Dropdown Content Styles */
-.dropdown-content {
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-login {
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-login:hover {
+  background-color: #ff5a4d;
+}
+
+/* Dropdown Menu Styles */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
-  z-index: 1;
-  border-radius: 5px; /* Slightly rounded corners */
+  top: 35px;
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.dropdown-content a {
-  color: black; /* Ensuring text color is black for visibility */
-  padding: 12px 16px;
-  text-decoration: none; /* Removing underline */
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  color: #fff;
   display: block;
-  font-weight: normal; /* Normal text weight for dropdown links */
+  padding: 5px 10px;
 }
 
-/* Apply border-radius to first and last child */
-.dropdown-content a:first-child {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.dropdown-menu a:hover {
+  background-color: #1f1f1f;
 }
 
-.dropdown-content a:last-child {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.dropdown-content a:hover {
-  background-color: var(
-    --background-color-alternate
-  ); /* Hover background color */
-  text-decoration: none; /* Ensuring no underline on hover */
+/* Mobile Menu Toggle Styles */
+.mobile-menu-toggle {
+  display: none; /* Assuming it will be visible only on mobile with further media query */
 }

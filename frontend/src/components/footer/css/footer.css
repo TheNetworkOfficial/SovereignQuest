@@ -1,14 +1,56 @@
-/* Footer styles */
+/* Footer Styles */
 .site-footer {
-  background-color: #333;
+  background-color: #1f1f1f;
   color: white;
-  text-align: center;
   padding: 1rem 0;
   width: 100%;
 }
 
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.footer-about, .footer-links, .footer-contact {
+  max-width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-about p, .footer-contact p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0; /* Remove default list padding */
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-media a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
 .social-icons {
+  text-align: center;
   margin-bottom: 1rem; /* Adds space below the icon links */
+  width: 100%;
 }
 
 .social-icons a {
@@ -22,4 +64,10 @@
 .social-icons a:focus {
   color: #5b92e5; /* Change color on hover/focus for visual feedback */
   text-decoration: none; /* Removes underline from links */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  background-color: #141414;
 }
