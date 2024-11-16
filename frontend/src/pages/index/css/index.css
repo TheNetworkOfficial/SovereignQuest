@@ -45,7 +45,7 @@ body {
 
 .hero-image {
   flex: 1 1 auto;
-  margin-left: 25vw; /* Adjusts position based on viewport width */
+  margin-left: 18vw; /* Adjusts position based on viewport width */
   display: flex;
   justify-content: flex-start; /* Aligns image to the left within the container */
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .hero-content p {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
@@ -95,20 +95,23 @@ body {
 .features-grid {
   display: flex;
   justify-content: space-around;
+  gap: 20px; /* Optional: Adds spacing between feature items */
 }
 
 .feature-item {
-  max-width: 30%;
-  background-color: #fff;
-  padding: 30px;
+  max-width: 20%;
+  background-color: #bbbbbb;
+  padding: 1%;
   border-radius: 10px;
   text-align: center;
 }
 
-.feature-item i {
-  font-size: 50px;
-  color: #ff6f61;
-  margin-bottom: 20px;
+.feature-item img {
+  width: 100px;  /* Adjust the width to fit your needs */
+  height: 100px; /* Maintain the square ratio */
+  margin-bottom: 20px; /* Adds some space between the image and the text */
+  fill: currentColor; /* If SVG supports this, the color will adapt */
+  color: #ff6f61; /* Sets the SVG color (if fill is set to currentColor inside the SVG) */
 }
 
 .feature-item h3 {

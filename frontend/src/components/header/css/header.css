@@ -9,6 +9,7 @@
 }
 
 .logo-wrapper {
+  margin-left: 4rem;
   display: flex;
   align-items: center;
   flex: 0 0 auto; /* Do not grow, do not shrink, and base size on the content */
@@ -29,9 +30,8 @@
 }
 
 .logo-title {
-  font-family: 'Gideon Roman', serif;
   margin-left: 1rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   display: flex;
   align-items: center; /* Centers text vertically */
@@ -43,6 +43,7 @@
 }
 
 .navigation {
+  margin-right: 4rem;
   list-style: none;
   display: flex;
   align-items: center;
@@ -50,6 +51,7 @@
 
 .navigation li {
   margin-left: 20px;
+  font-size: 1.25rem;
   position: relative;
 }
 
