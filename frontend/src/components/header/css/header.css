@@ -59,6 +59,9 @@
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  display: flex; /* Make the entire link block interactable */
+  align-items: center; /* Center the caret icon and text */
+  padding: 10px; /* Add padding to expand hover area */
 }
 
 .btn-login {
@@ -72,30 +75,32 @@
 }
 
 /* Dropdown Menu Styles */
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-menu {
+.dropdown-content {
   display: none;
   position: absolute;
-  top: 35px;
+  top: 100%; /* Ensure dropdown appears below the dropdown trigger */
+  left: 0;
   background-color: #2c2c2c;
   padding: 10px;
   border-radius: 5px;
+  min-width: 200px; /* Ensure dropdown content is wide enough */
 }
 
-.dropdown-menu li {
+.dropdown-content li {
   margin: 0;
 }
 
-.dropdown-menu a {
+.dropdown-content a {
   color: #fff;
   display: block;
   padding: 5px 10px;
 }
 
-.dropdown-menu a:hover {
+.dropdown-content a:hover {
   background-color: #1f1f1f;
 }
 
