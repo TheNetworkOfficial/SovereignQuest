@@ -8,6 +8,8 @@ module.exports = {
   entry: {
     main: "./frontend/src/main.js",
     index: "./frontend/src/pages/index/index.js",
+    characters: "./frontend/src/pages/characters/characters.js",
+    characterSheets: "./frontend/src/pages/characterSheets/characterSheets.js",
     login: "./frontend/src/pages/login/login.js",
     registration: "./frontend/src/pages/registration/registration.js",
     forgotUsername: "./frontend/src/pages/forgotUsername/forgotUsername.js",
@@ -64,6 +66,18 @@ module.exports = {
       template: "./frontend/src/pages/index/index.html",
       filename: "index.html",
       chunks: ["main", "index"],
+      favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./frontend/src/pages/characters/characters.html",
+      filename: "characters.html",
+      chunks: ["main", "characters"],
+      favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./frontend/src/pages/characterSheets/characterSheets.html",
+      filename: "characterSheets.html",
+      chunks: ["main", "characterSheets"],
       favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
     }),
     new HtmlWebpackPlugin({
