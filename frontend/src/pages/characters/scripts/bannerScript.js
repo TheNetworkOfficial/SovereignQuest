@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".characters-tab-button");
-  const tabContents = document.querySelectorAll(".characters-tab-content");
-
   let isAnimating = false;
 
   tabButtons.forEach((button) => {
@@ -46,10 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
       isAnimating = false;
     });
   });
-
-  function delay(duration) {
-    return new Promise((resolve) => setTimeout(resolve, duration));
-  }
 
   function playWipeOutAnimation(tabContent) {
     return new Promise((resolve) => {
