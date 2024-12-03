@@ -1,16 +1,4 @@
 /* Index Landing Page */
-/* Reset and Base Styles */
-body, h1, h2, h3, h4, p, ul, li, a {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-}
-
 #header-placeholder {
   position: fixed;
   top: 0;

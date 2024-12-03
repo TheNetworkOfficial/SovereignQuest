@@ -1,8 +1,10 @@
 /* Footer Styles */
 .site-footer {
+  flex-shrink: 0; /* Ensures footer stays at the bottom */
+  margin-top: auto; /* Pushes the footer to the bottom when there's extra space */
   background-color: #1f1f1f;
   color: white;
-  padding: 1rem 0;
+  padding-top: 1rem;
   width: 100%;
 }
 
@@ -11,6 +13,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 50px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  background-color: #141414;
 }
 
 .footer-about, .footer-links, .footer-contact {
@@ -64,10 +72,4 @@
 .social-icons a:focus {
   color: #5b92e5; /* Change color on hover/focus for visual feedback */
   text-decoration: none; /* Removes underline from links */
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 20px;
-  background-color: #141414;
 }

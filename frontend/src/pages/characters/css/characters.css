@@ -1,0 +1,143 @@
+.characters {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 50px;
+  background-image: url('../../../assets/images/hero/knightUnderTree.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.characters h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #000000;
+  text-shadow: 2px 2px 8px rgb(255, 255, 255);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.characters-tab-button {
+  background-color: #bbbbbb;
+  color: #1f1f1f;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.characters-tab-button.active {
+  background-color: #ff6f61;
+  color: #fff;
+}
+
+.characters-tab-button:disabled {
+  background-color: #bbbbbb;
+  opacity: 0.9;
+}
+
+.tabs-content-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+}
+
+.characters-tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.banner {
+  position: relative;
+  margin: 0 auto 50px auto; /* Center the banner */
+  width: 1000px;
+  height: 400px;
+  background: url('../../../assets/images/icons/banner-sideways.png') no-repeat center center;
+  background-size: contain;
+  z-index: 1;
+  opacity: 1;
+  overflow: hidden;
+  clip-path: inset(0 0% 0 0); /* Initially fully visible */
+  visibility: hidden; /* Hide banners by default */
+}
+
+.banner .content {
+  position: absolute;
+  width: 90%;
+  left: 47%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+}
+
+.banner p {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 8px rgb(0, 0, 0);
+}
+
+.banner a {
+  width: 30%;
+  top: 60%;
+  left: 47%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  z-index: 2;
+  color: #fff;
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner a:hover {
+  background-color: #ff5a4d;
+}
+
+/* Animation Keyframes */
+@keyframes wipeIn {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+@keyframes wipeOut {
+  from {
+    clip-path: inset(0 0% 0 0);
+  }
+  to {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
