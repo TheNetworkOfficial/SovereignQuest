@@ -2,8 +2,8 @@ import {
   setRace,
   setSubrace,
   getAvailableSubraces,
-//  getCharacterSummary,
-  submitCharacterData,
+/*  getCharacterSummary,
+  submitCharacterData, */
 } from "./builderData.js";
 
 import {
