@@ -9,6 +9,7 @@ module.exports = {
     main: "./frontend/src/main.js",
     index: "./frontend/src/pages/index/index.js",
     characters: "./frontend/src/pages/characters/characters.js",
+    characterBuilder: "./frontend/src/pages/characterBuilder/characterBuilder.js",
     characterSheets: "./frontend/src/pages/characterSheets/characterSheets.js",
     login: "./frontend/src/pages/login/login.js",
     registration: "./frontend/src/pages/registration/registration.js",
@@ -75,6 +76,12 @@ module.exports = {
       favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
     }),
     new HtmlWebpackPlugin({
+      template: "./frontend/src/pages/characterBuilder/characterBuilder.html",
+      filename: "characterBuilder.html",
+      chunks: ["main", "characterBuilder"],
+      favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
+    }),
+    new HtmlWebpackPlugin({
       template: "./frontend/src/pages/characterSheets/characterSheets.html",
       filename: "characterSheets.html",
       chunks: ["main", "characterSheets"],
@@ -109,6 +116,10 @@ module.exports = {
       filename: "resetPassword.html",
       chunks: ["main", "resetPassword"],
       favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
+    }),
+    new HtmlWebpackPlugin({
+      template: './frontend/src/pages/popups/character-creation-popup.html',
+      filename: 'character-creation-popup.html'
     }),
   ],
   devServer: {

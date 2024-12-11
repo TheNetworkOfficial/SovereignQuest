@@ -62,8 +62,3 @@ body {
   min-height: 100vh; /* Allows the main content to stretch to the full viewport height when there is not enough content */
   width: 100%;
 }
-
-button {
-  font-family: var(--font-family);
-  font-weight: 600;
-}

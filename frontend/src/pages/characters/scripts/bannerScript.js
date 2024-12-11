@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Start wipe-out animation
-      banner.style.animation = "wipeOut 3s forwards";
+      banner.style.animation = "wipeOut 2s forwards";
 
       banner.addEventListener("animationend", function bannerWipeOutEnd(event) {
         if (event.target === banner && event.animationName === 'wipeOut') {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       banner.style.visibility = 'visible';
 
       // Start wipe-in animation
-      banner.style.animation = "wipeIn 3s forwards";
+      banner.style.animation = "wipeIn 2s forwards";
 
       // Delay content fade-in to sync with wipe-in
       setTimeout(() => {
