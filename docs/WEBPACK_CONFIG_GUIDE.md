@@ -37,13 +37,13 @@ const path = require("path");
 module.exports = {
   mode: "production",
   entry: {
-    main: "./frontend/src/main.js",
-    index: "./frontend/src/pages/index/index.js",
-    login: "./frontend/src/pages/login/login.js",
-    registration: "./frontend/src/pages/registration/registration.js",
-    forgotUsername: "./frontend/src/pages/forgotUsername/forgotUsername.js",
-    forgotPassword: "./frontend/src/pages/forgotPassword/forgotPassword.js",
-    resetPassword: "./frontend/src/pages/resetPassword/resetPassword.js",
+    main: "./src/main.js",
+    index: "./src/pages/index/index.js",
+    login: "./src/pages/login/login.js",
+    registration: "./src/pages/registration/registration.js",
+    forgotUsername: "./src/pages/forgotUsername/forgotUsername.js",
+    forgotPassword: "./src/pages/forgotPassword/forgotPassword.js",
+    resetPassword: "./src/pages/resetPassword/resetPassword.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -84,16 +84,16 @@ module.exports = {
       filename: "css/[name].[contenthash].css",
     }),
     new HtmlWebpackPlugin({
-      template: "./frontend/src/pages/index/index.html",
+      template: "./src/pages/index/index.html",
       filename: "index.html",
       chunks: ["main", "index"],
-      favicon: "./frontend/src/assets/images/icons/SovereignQuest.pngnQuest.png",
+      favicon: "./src/assets/images/icons/SovereignQuest.pngnQuest.png",
     }),
     new HtmlWebpackPlugin({
-      template: "./frontend/src/pages/login/login.html",
+      template: "./src/pages/login/login.html",
       filename: "login.html",
       chunks: ["main", "login"],
-      favicon: "./frontend/src/assets/images/icons/SovereignQuest.png",
+      favicon: "./src/assets/images/icons/SovereignQuest.png",
     }),
     // Additional pages...
   ],
@@ -152,10 +152,10 @@ Example for adding a new page called `about`:
 
 ```javascript
 new HtmlWebpackPlugin({
-  template: './frontend/src/pages/about/index.html',
+  template: './src/pages/about/index.html',
   filename: 'about.html',
   chunks: ['main', 'about'],
-  favicon: './frontend/src/assets/images/icons/SovereignQuest.png'
+  favicon: './src/assets/images/icons/SovereignQuest.png'
 }),
 ```
 
