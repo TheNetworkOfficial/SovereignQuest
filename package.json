@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Unified repository for the SovereignQuest VTT",
   "scripts": {
+    "test": "echo \"No tests yet\"",
     "start:frontend": "npm start --prefix frontend",
     "start:backend": "npm start --prefix backend",
     "build:frontend": "npm run build --prefix frontend",
@@ -14,6 +15,7 @@
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.11.0",
     "prettier": "^3.3.3"
   },
   "keywords": [],
