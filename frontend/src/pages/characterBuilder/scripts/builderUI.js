@@ -115,7 +115,7 @@ function loadSubraceOptions(subraces, selectedRace) {
   });
 }
 
-function loadGenderOptions(genders) {
+/* function loadGenderOptions(genders) {
   const genderContainer = document.querySelector(".character-builder .step-gender-selection .options");
   genderContainer.innerHTML = genders
     .map((gender) => `<div class="character-option" data-gender="${gender}">${gender}</div>`)
@@ -152,7 +152,7 @@ function loadBackgroundOptions(homelands, religions, devotions) {
     </label>
     <button class="btn btn-next">Next</button>
   `;
-}
+} */
 
 function updateCharacterSummary(summary) {
   const summaryContainer = document.querySelector('.character-builder .step-summary .character-summary');

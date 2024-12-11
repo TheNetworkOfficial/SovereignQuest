@@ -2,7 +2,7 @@ import {
   setRace,
   setSubrace,
   getAvailableSubraces,
-  getCharacterSummary,
+//  getCharacterSummary,
   submitCharacterData,
 } from "./builderData.js";
 
@@ -10,7 +10,7 @@ import {
   showStep,
   enableNextButton,
   loadSubraceOptions,
-  updateCharacterSummary,
+//  updateCharacterSummary,
 } from "./builderUI.js";
 
 import { raceDetails } from "./builderData.js"; // Ensure the race details are properly imported
@@ -184,7 +184,7 @@ function initEventListeners() {
     });
   }
 
-  // Gender selection
+  /* Gender selection
   const genderStep = builder.querySelector(".step-gender-selection");
   if (genderStep) {
     const genderOptions = genderStep.querySelectorAll(".character-option");
@@ -259,7 +259,7 @@ function initEventListeners() {
         // For now, just log the result.
       });
     }
-  }
-}
+  } */
+} 
 
 export { initEventListeners };
