@@ -1,54 +1,24 @@
 {
   "name": "sovereignquest",
   "version": "1.0.0",
-  "description": "Please refer to the Contribution Guide (CONTRIBUTING.md) for protocols on code formatting, creating branches, making pull requests, and adding comments. Use this guide to set up basic code style standards before you begin development.",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs",
-    "test": "tests"
-  },
+  "description": "Unified repository for the SovereignQuest VTT",
   "scripts": {
     "test": "echo \"No tests yet\"",
-    "prepare": "[ $CI ] || husky install",
-    "start": "webpack serve --config webpack.config.js --mode development --open",
-    "build": "webpack --config webpack.config.js --mode production",
+    "start:frontend": "npm start --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "build:frontend": "npm run build --prefix frontend",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@babel/preset-env": "^7.26.0",
     "@eslint/js": "^9.13.0",
-    "autoprefixer": "^10.4.20",
-    "babel-loader": "^9.2.1",
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^7.1.2",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.11.0",
-    "html-loader": "^5.1.0",
-    "html-webpack-plugin": "^5.6.3",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "mini-css-extract-plugin": "^2.9.2",
-    "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "prettier": "^3.3.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
