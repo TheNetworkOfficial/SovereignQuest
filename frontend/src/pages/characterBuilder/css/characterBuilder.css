@@ -1,0 +1,256 @@
+.character-builder {
+  min-height: 100vh; /* Ensure it expands if content overflows */
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 100px 20px 100px 20px;
+  box-sizing: border-box; /* Include padding in total height */
+}
+
+.step {
+  display: none; /* Hide all steps by default */
+}
+.step.active {
+  display: block; /* Show the active step */
+}
+
+/* Introduction Step */
+.step-intro .intro-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+.character-builder .step-intro .intro-text .intro-buttons {
+  text-align: right;
+  padding-right: 5%;
+}
+.intro-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.intro-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.intro-image {
+  flex: 1;
+  max-width: 40%;
+  text-align: right;
+}
+.intro-image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Race Selection Step */
+.step-race-selection > h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.race-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 30px;
+}
+
+.race-text {
+  flex: 1;
+  max-width: 35%;
+  text-align: left;
+}
+.race-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.character-options-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center; /* Center the grid vertically (optional) */
+  height: 100%;
+}
+
+.character-options {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* Shared Option Styling for Race and Subrace */
+.character-option,
+.subrace-option {
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  overflow: hidden;
+  width: 70%; /* Make the tiles responsive */
+  aspect-ratio: 1; /* Creates a square tile */
+  transition: transform 0.2s, border-color 0.2s;
+  max-width: 250px; /* Adjust as needed */
+  width: 100%;
+}
+
+.character-option:hover,
+.subrace-option:hover {
+  transform: scale(1.05);
+}
+
+.character-option.selected,
+.subrace-option.selected {
+  border-color: #ff6f61;
+}
+
+.character-option img,
+.subrace-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the tile without distortion */
+  display: block; /* Ensures proper layout within the container */
+}
+
+.character-option h3,
+.subrace-option h3 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Sliding info panel shared for race and subrace */
+.race-info-panel,
+.subrace-info-panel {
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  border: 2px solid #eee;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 1.5s ease, opacity 1.5s ease;
+}
+
+.race-info-panel.active,
+.subrace-info-panel.active {
+  opacity: 1;
+}
+
+.race-info-panel h3,
+.subrace-info-panel h3 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.race-info-panel h4,
+.subrace-info-panel h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.race-info-panel p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.race-info-panel .race-info {
+  font-weight: 600;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  color: #000000;
+}
+
+.race-info-panel .race-info ul {
+  font-size: 24px;
+  list-style: inside disc;
+  margin: 0;
+  padding: 0;
+}
+
+.race-info-panel .race-info li {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* Four columns for horizontal alignment */
+  gap: 10px; /* Space between stat boxes */
+  margin-top: 10px;
+  text-align: center; /* Center text within each box */
+}
+
+.stats .stat {
+  background-color: #f9f9f9; /* Optional: Add a background to the stats */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+.stats .stat-label {
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px; /* Space between label and value */
+}
+
+.stats .stat-value {
+  font-size: 18px;
+  color: #333; /* Optional: Different color for the value */
+}
+
+.race-info-panel .btn-next {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Subrace Step*/
+
+
+/* Summary Step */
+.step-summary h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.character-summary {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.character-summary p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}

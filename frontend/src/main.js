@@ -13,5 +13,5 @@ import "./scripts/adjustHeaderPadding.js";
 import "./scripts/dropDownMenu.js";
 import "./scripts/headerBehavior.js";
 import "./scripts/loadHeaderFooter.js";
-// import "./pages/popups/scripts/popupInitilzation.js";
+import "./pages/popups/scripts/popupInitilzation.js";
 import "./scripts/tabs.js";

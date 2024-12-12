@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Characters | LEN Creative</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Placeholder for Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Character Builder Section -->
+      <section class="character-builder">
+        <!-- Introduction Step -->
+        <div class="step step-intro active">
+          <div class="intro-container">
+            <div class="intro-text">
+              <h2>Welcome to the Character Builder</h2>
+              <p>
+                SovereignQuest, the infamous tabletop RPG, is at its core a game of swords and sorcery—where valiant knights clash with mighty dragons, cunning rogues flit 
+                through the shadows, and wizened sages channel the power of ancient gods. It is a realm of myth and magic, brought to life by the camaraderie and imagination of 
+                those who come together with adventure in their hearts.
+              </p>
+
+              <p>
+                Before you begin your journey, you will need to create your character. This character will serve as your avatar within the world of SovereignQuest, growing and 
+                evolving as you play. Your stats—whether generated here in our Character Builder or rolled with your Dungeon Master—represent your “god-given abilities,” defining 
+                the limits of your strength, swiftness, intellect, and more. Similarly, details such as your appearance, backstory, and other distinctive elements can be crafted 
+                by you, randomly generated, or assigned by your Dungeon Master.
+              </p> 
+                
+              <p>
+                Within the game you are your character, guided by the morals, philosophies, and ambitions you set for yourself (alignment). You can interact with the other 
+                players gathered in your Moot Hall (lobby), and the wider world around you, crafted by your The Dungeon Master, who has the part of "everyone else", bringing the 
+                world around you to life, and will present you with a variety of new characters to talk too, drink with, adventure beside, and fight against. Within the world of 
+                SovereignQuest you will become a thespian on of a grand stage made of the virtual pen - acquiring gold, knowledge, and experience as you quest on your journey to 
+                master SovereignQuest!
+              </p>
+
+              <p>
+                <strong>Important Note:</strong> While any character may be invited into private Moot Halls or join in-person games at the table’s discretion, please remember that only those 
+                created through this Character Builder are eligible for officially licensed tournaments and competitive modes. This ensures a fair and consistent standard for all 
+                challengers who dare to test their mettle in the world of SovereignQuest.
+              </p>
+
+              <div class="intro-buttons">
+                <a href="sheetEditor.html" class="btn">Switch to Sheet Editor</a>
+                <button class="btn btn-start">Get Started</button>
+              </div>
+            </div> <!-- Properly closing intro-text div -->
+            <div class="intro-image">
+              <img src="../../assets/images/characters/Races/orcShamanFemale.png" alt="Orc Shaman Female Portrait" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Race Selection Step -->
+        <div class="step step-race-selection">
+          <!-- Move the heading above the container -->
+          <h2>Select Your Race</h2>
+          <div class="race-container">
+            <div class="race-text">
+              <p>
+                Before you embark upon your grand adventure, you must choose the racial heritage of your character. Within the world of SovereignQuest, a vast panoply of sentient 
+                beings walk beneath sun and star, but as a newcomer, you may initially choose only from among the five prominent “foundational races” that dominate the continents. 
+                Each of these lineages brings its own rich heritage, distinct traits, and innate predispositions for certain skills, shaping not only how you interact with others, 
+                but the tools you will have at your disposal as you navigate perilous dungeons, negotiate through the realms, or outwit cunning foes.
+              </p>
+              <p>
+                Though the foundational races are the most prominent of the land, they are not its sum. As your journey progresses, other races—more elusive and rare—may become 
+                accessible to you for subsequent character builds. The nature and variety of these additional race selections will depend on the choices you make throughout your 
+                journey, and range from sub-racial selections to entirely new species, rewarding the most adventurous of players with the greatest rewards. In this way, new 
+                horizons of possibility open themselves to you over multiple playthroughs, ensuring that the legacy of your most epic moments extend far beyond a single campaign.
+              </p>
+              <p>
+                Consider each race’s gifts and burdens thoughtfully, and when your choice aligns with the vision you hold for your new persona, proceed by selecting a race from the right. 
+                Once chosen, more details will appear below to guide your next steps. Then, click “Next” to see the sub-racial options available for your character.
+              </p>
+              <div class="race-buttons-container">
+                <button class="btn btn-back">Back</button>
+              </div>
+            </div>
+
+            <div class="character-options-area">
+              <div class="character-options">
+                <div class="character-option" data-race="Human">
+                  <img src="../../assets/images/characters/Races/humanPortrait.png" alt="Human" />
+                  <h3>Human</h3>
+                </div>
+                <div class="character-option" data-race="Elf">
+                  <img src="../../assets/images/characters/Races/elfPortrait.png" alt="Elf" />
+                  <h3>Elf</h3>
+                </div>
+                <div class="character-option" data-race="Halfling">
+                  <img src="../../assets/images/characters/Races/halflingPortrait.png" alt="Halfling" />
+                  <h3>Halfling</h3>
+                </div>
+                <div class="character-option" data-race="Dwarf">
+                  <img src="../../assets/images/characters/Races/dwarfPortrait.png" alt="Dwarf" />
+                  <h3>Dwarf</h3>
+                </div>
+                <div class="character-option" data-race="Gnome">
+                  <img src="../../assets/images/characters/Races/gnomePortrait.png" alt="Gnome" />
+                  <h3>Gnome</h3>
+                </div>
+                <div class="character-option" data-race="Orc">
+                  <img src="../../assets/images/characters/Races/orcPortrait.png" alt="Orc" />
+                  <h3>Orc</h3>
+                </div>
+              </div>
+
+              <div class="race-info-panel">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subrace Selection Step -->
+        <div class="step step-subrace-selection">
+          <h2>Select Your Subrace</h2>
+          <div class="race-container">
+            <div class="race-text">
+              <p>
+                Now that you have chosen your race, it is time to delve deeper and select a subrace. Each subrace 
+                offers unique cultural traits, skills, and even further stat adjustments that distinguish them from the broader race.
+              </p>
+              <p>
+                Consider the subrace's lore, its particular strengths and weaknesses, and how it complements the vision you have 
+                for your character. Once chosen, more details will appear below. Then, click “Next” to finalize your choice.
+              </p>
+              <div class="race-buttons-container">
+                <button class="btn btn-back">Back</button>
+              </div>
+            </div>
+
+            <div class="character-options-area">
+              <!-- We will dynamically insert subrace options here, just like races -->
+              <div class="character-options subrace-options">
+                <!-- Dynamically loaded subrace-option tiles go here -->
+              </div>
+
+              <!-- Use race-info-panel class for identical styling -->
+              <div class="race-info-panel subrace-info-panel">
+                <!-- Dynamically populated with subrace details -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step step-gender-selection">
+          <h2>Select Your Character's Gender</h2>
+          <div class="race-container">
+            <div class="race-text">
+              <p>
+                Define your character's gender as part of their identity. Whether influenced by lore, appearance, or personal preference, 
+                this choice is entirely yours. Gender may affect certain interactions and character traits in SovereignQuest, 
+                but is meant to enrich roleplaying and gameplay.
+              </p>
+              <p>
+                <strong>Important Note:</strong> While custom entries are celebrated for private games, the official competitive modes of 
+                SovereignQuest require selections to adhere to the provided presets to ensure consistency.
+                Switch to the Sheet Editor for custom input.
+              </p>
+              <div class="race-buttons-container">
+                <button class="btn btn-back">Back</button>
+              </div>
+            </div>
+        
+            <div class="character-options-area">
+              <div class="character-options gender-options">
+                <div class="character-option" data-gender="Male">
+                  <h3>Male</h3>
+                </div>
+                <div class="character-option" data-gender="Female">
+                  <h3>Female</h3>
+                </div>
+                <div class="character-option" data-gender="Non-Binary">
+                  <h3>Non-Binary</h3>
+                </div>
+              </div>
+              <div class="race-info-panel gender-info-panel">
+                <!-- Dynamically populated with gender details -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="step step-physical-details">
+          <h2>Define Physical Details</h2>
+          <div class="race-container">
+            <div class="race-text">
+              <p>
+                Refine your character's physical traits including height, weight, and age. While primarily cosmetic, these details can 
+                influence in-game interactions and help you immerse yourself fully into the world of SovereignQuest.
+              </p>
+              <p>
+                <strong>Important Note:</strong> For official competitive play, physical traits must adhere to the presets provided 
+                here. Feel free to explore limitless possibilities in private games with the Sheet Editor.
+              </p>
+              <div class="race-buttons-container">
+                <button class="btn btn-back">Back</button>
+              </div>
+            </div>
+        
+            <div class="character-options-area">
+              <div class="character-options">
+                <div class="character-option" data-physical="Height">
+                  <h3>Height</h3>
+                </div>
+                <div class="character-option" data-physical="Weight">
+                  <h3>Weight</h3>
+                </div>
+                <div class="character-option" data-physical="Age">
+                  <h3>Age</h3>
+                </div>
+              </div>
+              <div class="race-info-panel physical-info-panel">
+                <!-- Dynamically populated with physical details -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="step step-homeland-religion">
+          <h2>Choose Homeland, Religion, and Devotion</h2>
+          <div class="race-container">
+            <div class="race-text">
+              <p>
+                Ground your character in the lore of SovereignQuest by selecting their homeland, religion, and level of devotion. 
+                Each choice weaves your character deeper into the world, affecting their outlook, alliances, and access to resources.
+              </p>
+              <p>
+                <strong>Important Note:</strong> For competitive balance, only the presets provided here are valid for official 
+                play. Customize freely for creative campaigns using the Sheet Editor.
+              </p>
+              <div class="race-buttons-container">
+                <button class="btn btn-back">Back</button>
+              </div>
+            </div>
+        
+            <div class="character-options-area">
+              <div class="character-options">
+                <div class="character-option" data-homeland="Homeland">
+                  <h3>Homeland</h3>
+                </div>
+                <div class="character-option" data-religion="Religion">
+                  <h3>Religion</h3>
+                </div>
+                <div class="character-option" data-devotion="Devotion">
+                  <h3>Devotion</h3>
+                </div>
+              </div>
+              <div class="race-info-panel homeland-info-panel">
+                <!-- Dynamically populated with homeland/religion/devotion details -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Step -->
+        <div class="step step-summary">
+          <h2>Character Summary</h2>
+          <div class="character-summary">
+            <!-- Display the selected options -->
+          </div>
+          <div class="summary-buttons-container">
+            <button class="btn-back">Back</button>
+            <button class="btn-submit">Finish</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

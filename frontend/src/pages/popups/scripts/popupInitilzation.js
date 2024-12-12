@@ -1,33 +1,34 @@
-// popupInitilzation.js
+// popupInitialization.js
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
 
   let popupsToLoad = [
-    "edit-products-popup.html",
-    "add-multiple-products-popup.html",
-    "edit-resin-popup.html",
-    "edit-resin-mix-popup.html",
-    "markup-popup.html",
+    "character-creation-popup.html" // Add our new popup file here
   ];
   let loadedPopupsCount = 0;
 
   function initializePopupEvents() {
     console.log("Initializing popup events...");
-    function setupPopup(popupId, triggerId, closeButtonSelector) {
+
+    function setupPopup(popupId, triggerSelector, closeButtonSelector) {
       const popup = document.getElementById(popupId);
       if (!popup) {
         console.log(`Popup with ID ${popupId} not found.`);
         return;
       }
 
-      const trigger = document.getElementById(triggerId);
+      const triggers = document.querySelectorAll(triggerSelector);
       const closeButton = popup.querySelector(closeButtonSelector);
-      if (trigger && closeButton) {
-        console.log(`Setting up popup and trigger for ${popupId}.`);
-        trigger.addEventListener("click", (e) => {
-          e.preventDefault();
-          console.log(`Displaying popup: ${popupId}`);
-          popup.style.display = "flex";
+
+      if (triggers.length > 0 && closeButton) {
+        console.log(`Setting up popup and triggers for ${popupId}.`);
+
+        triggers.forEach((trigger) => {
+          trigger.addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log(`Displaying popup: ${popupId}`);
+            popup.style.display = "flex";
+          });
         });
 
         closeButton.addEventListener("click", () => {
@@ -35,44 +36,25 @@ document.addEventListener("DOMContentLoaded", () => {
           popup.style.display = "none";
         });
       } else {
-        if (!trigger) console.log(`Trigger with ID ${triggerId} not found.`);
+        if (triggers.length === 0) console.log(`No triggers found for selector ${triggerSelector}.`);
         if (!closeButton)
           console.log(
-            `Close button with selector ${closeButtonSelector} not found in popup ${popupId}.`,
+            `Close button with selector ${closeButtonSelector} not found in popup ${popupId}.`
           );
       }
     }
 
+    // Initialize the character creation popup
     setupPopup(
-      "edit-products-popup-container",
-      "edit-products-trigger",
-      ".edit-products-popup-close-button",
-    );
-    setupPopup(
-      "add-multiple-products-popup-container",
-      "add-multiple-products",
-      ".add-multiple-products-popup-close-button",
-    );
-    setupPopup(
-      "edit-resin-popup-container",
-      "edit-resin-trigger",
-      ".edit-resin-popup-close-button",
-    );
-    setupPopup(
-      "edit-resin-mix-popup-container",
-      "edit-resin-mix-trigger",
-      ".edit-resin-mix-popup-close-button",
-    );
-    setupPopup(
-      "markup-popup-container",
-      "markup-trigger",
-      ".markup-popup-close-button",
+      "character-creation-popup-container",
+      ".btn-create", // The trigger selector for your "Start Character Creation" button
+      ".close-button"
     );
   }
 
   function loadPopupHtml(popupFileName) {
     console.log(`Attempting to load ${popupFileName} into body`);
-    const placeholder = document.body; // Change from 'footer-placeholder' to 'body'
+    const placeholder = document.body; // Load into the body
 
     fetch(`${popupFileName}`)
       .then((response) => response.text())
@@ -100,6 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load each popup
   popupsToLoad.forEach((popupFileName) => {
-    loadPopupHtml(popupFileName); // Removed 'footer-placeholder' parameter
+    loadPopupHtml(popupFileName);
   });
 });
